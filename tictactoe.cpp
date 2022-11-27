@@ -3,6 +3,7 @@ using namespace std;
 
 int main()
 {
+
     string a[9]={"1","2","3","4","5","6","7","8","9"};
     int n,count=1;
 
@@ -31,32 +32,42 @@ int main()
         
         if((count%2) ==0)
         {  cout << "\n\t\t\t\t\t*************"<< endl;
-           cout << "\t\t\t\t\tplayer 1 wins"<< endl;
+           cout << "\t\t\t\t\tplayer 1 wins!!"<< endl;
            cout << "\t\t\t\t\t*************"<< endl;         
         }
         else
-        {  cout << "\n5\t\t\t\t\t*************" << endl;
-           cout << "\t\t\t\t\tplayer 2 wins" << endl;
+        {  cout << "\n\t\t\t\t\t*************" << endl;
+           cout << "\t\t\t\t\tplayer 2 wins!!" << endl;
            cout << "\t\t\t\t\t*************" << endl;
         }
         return 0;
        
         
        }
-       else{
-                if((count%2)!=0){
-                cout << "\t\tplayer 1's turn (O)" << endl;
-                cout << "\t\tenter the cell no:" << endl;
-                cin >> n;
-                a[n-1]="O";
+       else{  
+                if(count==10){
+               cout << "\n\t\t\t\t\t*************" << endl;
+               cout << "\t\t\t\t\tIt's a draw!!" << endl;
+               cout << "\t\t\t\t\t*************" << endl;
+                return 0;
+
+                }
+
+               else{
+                      if((count%2)!=0){
+                     cout << "\n\n\t\tplayer 1's turn (O)" << endl;
+                     cout << "\t\tenter the cell no:" << endl;
+                     cin >> n;
+                     a[n-1]="O";
 
                 }
                 else{
-                        cout << "\t\tplayer 2's turn (X)" << endl;
+                        cout << "\n\n\t\tplayer 2's turn (X)" << endl;
                         cout << "\t\tenter the cell no:";
                         cin>> n;
                         a[n-1]="X";
                         }
+               }
        }
 
     count++;
