@@ -10,7 +10,7 @@ int main(){
 
     for(int i=0;i<n;i++)
     {
-        cin >> a[n];
+        cin >> a[i];
     }
 
     int curr=2,ans=2;
